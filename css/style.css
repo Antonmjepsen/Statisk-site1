@@ -1,0 +1,304 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.link_produktliste {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  gap: 40px;
+  max-width: 1100px;
+  width: 100%;
+  padding: 24px;
+}
+
+.product-image {
+  position: relative;
+  opacity: 0.5;
+}
+
+.tilbud {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.tilbudspris {
+  color: red;
+  font-size: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  margin-top: 8px;
+}
+
+.product-image-udsolgt {
+  position: relative;
+}
+
+.udsolgt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: gray;
+  color: white;
+  font-size: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.grid_title {
+  grid-column: 1 / -1;
+}
+
+.produkt {
+  border: black solid 1px;
+  display: block;
+  padding: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+}
+
+.h2_main {
+  text-align: left;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+}
+
+.h1_main {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 50px;
+  justify-self: center;
+  margin: 0;
+}
+
+.productlist-page {
+  padding: 0 24px 56px;
+}
+
+.product-grid-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.product-card {
+  border: 1px solid black;
+  text-decoration: none;
+  color: inherit;
+  background: white;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.product-card-content {
+  padding: 16px;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+.product-card-content h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.product-card-content p {
+  margin-bottom: 4px;
+}
+
+.product-page {
+  padding: 32px 24px 56px;
+}
+
+.product-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.product-detail-image img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid black;
+}
+
+.product-detail-info {
+  padding: 28px;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+.product-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 56px;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.product-meta,
+.product-price,
+.product-stock {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.add-to-basket-btn {
+  margin-top: 20px;
+  border: 1px solid black;
+  background: black;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.add-to-basket-btn:hover {
+  background: #333;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  min-height: 80px;
+  padding: 0 24px;
+  border-bottom: 1px solid #000;
+}
+
+.main-nav {
+  justify-self: start;
+  display: flex;
+  gap: 16px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-spacer {
+  justify-self: end;
+}
+
+@media (max-width: 900px) {
+  .link_produktliste {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    padding: 20px;
+  }
+
+  .h2_main {
+    margin-top: 32px;
+    font-size: 48px;
+  }
+
+  .produkt {
+    padding: 36px 20px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .product-name {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px 16px;
+    text-align: center;
+  }
+
+  .main-nav {
+    justify-self: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-spacer {
+    display: none;
+  }
+
+  .h1_main {
+    font-size: 36px;
+  }
+
+  .link_produktliste {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .produkt {
+    padding: 24px 16px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .h2_main {
+    font-size: 42px;
+    margin-top: 48px;
+  }
+}
